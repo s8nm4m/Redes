@@ -42,7 +42,7 @@ fun makeRequest(client: Socket, link: String, http: String) {
 
         '4' -> println("Try again with a different request.")
         '5' -> {
-            val lesser = if (http.last().code > '0'.code) http.last().code - '0'.code - 1 else http.last()
+            val lesser = if (http.last().code > '0'.code) http.last().code - '0'.code - 1 else return
             makeRequest(client, url, "HTTP/1.$lesser")
         }
     }
