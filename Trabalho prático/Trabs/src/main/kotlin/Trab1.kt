@@ -5,7 +5,7 @@ fun main() {
     val port = 80
     val url = "www.isel.pt"//"193.137.128.195"//"www.youtube.com"
     val client = Socket(url, port)
-    val http = "HTTP/1.1"
+    val http = "HTTP/1.0"
     makeRequest(client, url, http)
     client.close()
 }
